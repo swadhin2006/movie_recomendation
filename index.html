@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🎬 Movie Recommendation Engine</h1>
+                <p class="subtitle">Discover movies you'll love</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="movieInput" 
+                        class="search-input" 
+                        placeholder="Enter a movie name (e.g., Inception, The Matrix)"
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="search-btn">Get Recommendations</button>
+                </div>
+                <div id="loadingSpinner" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Finding recommendations...</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <div class="matched-movie">
+                    <h2>You searched for:</h2>
+                    <div id="matchedMovie" class="movie-card matched">
+                        <!-- Matched movie will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h2>Recommended Movies for You:</h2>
+                    <div id="recommendationsContainer" class="recommendations-grid">
+                        <!-- Recommendations will be displayed here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <!-- Initial State -->
+            <section id="initialState" class="initial-state">
+                <div class="initial-content">
+                    <div class="icon">🎥</div>
+                    <h2>Welcome to Movie Recommendations</h2>
+                    <p>Enter your favorite movie name above to discover similar movies you might enjoy!</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <p>Smart Recommendations</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <p>Instant Results</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎭</span>
+                            <p>Based on Genre & Cast</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Movie Recommendation Engine. Built with FastAPI & Love ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
